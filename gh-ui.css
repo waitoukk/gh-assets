@@ -1,0 +1,40 @@
+/* ------------------------------------------------------------------
+   Gh UI — hot components
+   Small on purpose: this is the file we edit and redeploy often, so it
+   must stay quick to upload over a slow link. Enqueued with ?ver=<mtime>,
+   so a new upload invalidates every cache automatically.
+   ------------------------------------------------------------------ */
+
+/* shop CTA (sliding arrow + underline) */
+.btn-shop{
+  display:inline-flex;align-items:flex-start;gap:0;
+  border:none;background:none;cursor:pointer;padding:0;
+  font-family:inherit;color:var(--ink,#171717);text-decoration:none;
+}
+.btn-shop span{
+  padding-bottom:7px;padding-right:15px;
+  letter-spacing:.28em;font-size:14px;font-weight:600;text-transform:uppercase;
+  line-height:1.2;
+}
+.btn-shop svg{transform:translateX(-8px);transition:transform .3s ease;margin-top:2px;fill:currentColor;flex:0 0 auto}
+.btn-shop:hover svg{transform:translateX(0)}
+.btn-shop:active svg{transform:scale(.9)}
+.btn-shop:focus-visible{outline:2px solid var(--red,#ef4444);outline-offset:6px;border-radius:4px}
+
+.hover-underline-animation{position:relative;display:inline-block;color:inherit;padding-bottom:20px}
+.hover-underline-animation::after{
+  content:"";position:absolute;width:100%;transform:scaleX(0);height:2px;bottom:0;left:0;
+  background-color:currentColor;transform-origin:bottom right;transition:transform .25s ease-out;
+}
+.btn-shop:hover .hover-underline-animation::after{transform:scaleX(1);transform-origin:bottom left}
+
+.btn-shop--light{color:#fff}
+.btn-shop--light:focus-visible{outline-color:#fff}
+
+/* smaller variant for card footers (blog "Read more") */
+.btn-shop--sm span{font-size:12px;letter-spacing:.18em;padding-right:11px;padding-bottom:3px}
+.btn-shop--sm .hover-underline-animation{padding-bottom:13px}
+.btn-shop--sm .hover-underline-animation::after{height:1.5px}
+.btn-shop--sm svg{width:22px;height:8px;margin-top:2px;transform:translateX(-6px)}
+.btn-shop--sm:hover svg{transform:translateX(0)}
+.btn-shop--sm:active svg{transform:scale(.92)}
