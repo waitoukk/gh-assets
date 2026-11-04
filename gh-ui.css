@@ -309,24 +309,22 @@
 }
 /* keeps the arrow button sized to its content inside a grid cell */
 .gh-submit{display:flex;align-items:center}
-/* ---- compact variant: icon only, label reveals on hover ---- */
-.btn-arrow--reveal{
+/* ---- compact variant for the form submit: label stays put ---- */
+.btn-arrow--compact{
   --arrow-bg:#171717;
   height:48px;
-  padding:0 13px;
-  gap:0;
+  padding:0 20px;
+  gap:.5em;
   font-size:15px;
+  font-weight:600;
   border-radius:12px;
-  justify-content:center;
-  transition:background .2s ease,transform .2s ease;
+  letter-spacing:0;
 }
-.btn-arrow--reveal svg{width:26px;height:26px}
-.btn-arrow--reveal > span:last-child{
-  max-width:0;opacity:0;margin-left:0;overflow:hidden;white-space:nowrap;
-  transition:max-width .4s ease,opacity .28s ease,margin-left .4s ease;
-}
-.btn-arrow--reveal:hover{transform:none}
-.btn-arrow--reveal:hover .svg-wrapper{animation:none}
-.btn-arrow--reveal:hover svg{transform:none}
-.btn-arrow--reveal:hover > span:last-child{max-width:14em;opacity:1;margin-left:.5em}
-.btn-arrow--reveal:active{transform:scale(.97)}
+.btn-arrow--compact svg{width:24px;height:24px}
+.btn-arrow--compact span{margin-left:0}
+/* no fly-out, no sliding label — only a plain hover feedback */
+.btn-arrow--compact:hover .svg-wrapper,
+.btn-arrow--compact:hover svg,
+.btn-arrow--compact:hover span{animation:none;transform:none}
+.btn-arrow--compact:hover{background:#000}
+.btn-arrow--compact:active{transform:scale(.97)}
