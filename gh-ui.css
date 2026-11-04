@@ -345,7 +345,10 @@ nav[aria-label="breadcrumb"]{display:none!important}
 /* ---- entrance motion: one animation per section, CSS only ----
    Uses scroll-driven animations so it never depends on JavaScript being
    executed (LiteSpeed defers/combines JS, which was swallowing the reveal). */
-.js [data-reveal]{opacity:1!important;transform:none!important;filter:none!important;transition:none!important}
+/* only the home page switched to section-level motion; other pages keep
+   their own per-element reveal (about page word-by-word included) */
+body.home .js [data-reveal],
+body.home [data-reveal]{opacity:1!important;transform:none!important;filter:none!important;transition:none!important}
 .has-reveal .single-post .wp-block-post-content > *{opacity:1!important;transform:none!important}
 
 @keyframes gh-sec-in{
