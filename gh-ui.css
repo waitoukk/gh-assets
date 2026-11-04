@@ -327,3 +327,13 @@
   display:block;width:100%;max-width:none;text-align:left;
   margin:8px 0 0;font-size:12.5px;line-height:1.55;color:#8a8a8a;
 }
+/* ---- form fields: focus shown with border + soft ring, never a red box ----
+   (:focus-visible matches text inputs even on mouse click, which is why the
+   newsletter field drew a red outline as soon as it was clicked) */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible{
+  outline:none!important;
+  border-color:#171717;
+  box-shadow:0 0 0 3px rgba(23,23,23,.08);
+}
