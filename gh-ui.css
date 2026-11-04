@@ -370,3 +370,9 @@ nav[aria-label="breadcrumb"]{display:none!important}
   main .trust,
   main article{animation:none!important}
 }
+/* ---- JS fallback for browsers without scroll-driven animations ----
+   The inline script only adds .sec-in when animation-timeline is unsupported,
+   so the two mechanisms never run at the same time. */
+.sec-in{animation:none!important;opacity:0;transform:translateY(24px);
+  transition:opacity .6s ease,transform .7s cubic-bezier(.16,1,.3,1)}
+.sec-in--on{opacity:1;transform:none}
