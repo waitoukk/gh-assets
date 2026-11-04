@@ -239,3 +239,33 @@
   border:0;background:none;color:#9a9a9a;cursor:pointer;font-size:15px;line-height:1;padding:0 2px;
 }
 .gh-contact .gh-file__list .gh-file__drop:hover{color:#ef4444}
+/* ---- skew-fill button ----
+   Port of the supplied snippet. Note: the original targeted `button:hover`
+   globally, which would restyle every button on the site; here everything is
+   scoped to .btn-skew, and colours come from --skew-color. */
+.btn-skew{
+  --skew-color:#171717;
+  --skew-scale:1.1;
+  position:relative;overflow:hidden;isolation:isolate;
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:1em 2em;border:none;border-radius:5px;
+  font-family:inherit;font-weight:700;font-size:15px;line-height:1;
+  letter-spacing:.28em;text-transform:uppercase;
+  color:var(--skew-color);background:transparent;cursor:pointer;text-decoration:none;
+  outline:2px solid var(--skew-color);
+  transition:color 1s ease,transform .4s ease,box-shadow .4s ease,outline-color .4s ease;
+}
+.btn-skew::before{
+  content:"";position:absolute;left:-50px;top:0;width:0;height:100%;
+  background-color:var(--skew-color);transform:skewX(45deg);z-index:-1;
+  transition:width 1s ease;
+}
+.btn-skew:hover{color:#fff;transform:scale(var(--skew-scale));box-shadow:4px 5px 17px -4px rgba(23,23,23,.35)}
+.btn-skew:hover::before{width:250%}
+.btn-skew:active{transform:scale(.98)}
+.btn-skew:focus-visible{outline:2px solid var(--red,#ef4444);outline-offset:4px}
+.btn-skew--teal{--skew-color:#2c9caf}
+.btn-skew--teal:hover{box-shadow:4px 5px 17px -4px #268391}
+/* static preview of the hover state (used on the component page only) */
+.btn-skew.is-hover{color:#fff;transform:scale(var(--skew-scale));box-shadow:4px 5px 17px -4px rgba(23,23,23,.35)}
+.btn-skew.is-hover::before{width:250%}
