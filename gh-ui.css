@@ -293,6 +293,7 @@
 }
 .btn-arrow svg{
   display:block;
+  fill:currentColor;
   transform-origin:center center;
   transition:transform .3s ease-in-out;
 }
