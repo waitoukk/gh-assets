@@ -269,7 +269,7 @@
 /* static preview of the hover state (used on the component page only) */
 .btn-skew.is-hover{color:#fff;transform:scale(var(--skew-scale));box-shadow:4px 5px 17px -4px rgba(23,23,23,.35)}
 .btn-skew.is-hover::before{width:250%}
-/* ---- arrow-fly button (params exactly as supplied) ---- */
+/* ---- arrow-fly button (supplied params + label fully clears on hover) ---- */
 .btn-arrow{
   --arrow-bg:royalblue;
   font-family:inherit;
@@ -286,10 +286,10 @@
   transition:all .2s;
   cursor:pointer;
 }
-.btn-arrow span{
+.btn-arrow > span:last-child{
   display:block;
   margin-left:.3em;
-  transition:all .3s ease-in-out;
+  transition:transform .3s ease-in-out,opacity .3s ease-in-out;
 }
 .btn-arrow svg{
   display:block;
@@ -299,32 +299,26 @@
 }
 .btn-arrow:hover .svg-wrapper{animation:fly-1 .6s ease-in-out infinite alternate}
 .btn-arrow:hover svg{transform:translateX(1.2em) rotate(45deg) scale(1.1)}
-.btn-arrow:hover span{transform:translateX(5em)}
+/* 5em was not enough for longer labels ("Send Inquiry" stayed half visible):
+   move the label by its own width plus a margin so nothing remains in view */
+.btn-arrow:hover > span:last-child{transform:translateX(calc(100% + 2em));opacity:0}
 .btn-arrow:active{transform:scale(.95)}
 .btn-arrow:focus-visible{outline:2px solid #fff;outline-offset:-4px}
+
+/* compact size + site colours for the form submit; animation stays as above */
+.btn-arrow--compact{
+  --arrow-bg:#171717;
+  height:48px;
+  padding:0 18px;
+  gap:.5em;
+  font-size:15px;
+  font-weight:600;
+  border-radius:12px;
+}
+.btn-arrow--compact > span:last-child{margin-left:0}
+.btn-arrow--compact svg{width:24px;height:24px}
 
 @keyframes fly-1{
   from{transform:translateY(.1em)}
   to{transform:translateY(-.1em)}
 }
-/* keeps the arrow button sized to its content inside a grid cell */
-.gh-submit{display:flex;align-items:center}
-/* ---- compact variant for the form submit: label stays put ---- */
-.btn-arrow--compact{
-  --arrow-bg:#171717;
-  height:48px;
-  padding:0 20px;
-  gap:.5em;
-  font-size:15px;
-  font-weight:600;
-  border-radius:12px;
-  letter-spacing:0;
-}
-.btn-arrow--compact svg{width:24px;height:24px}
-.btn-arrow--compact span{margin-left:0}
-/* no fly-out, no sliding label — only a plain hover feedback */
-.btn-arrow--compact:hover .svg-wrapper,
-.btn-arrow--compact:hover svg,
-.btn-arrow--compact:hover span{animation:none;transform:none}
-.btn-arrow--compact:hover{background:#000}
-.btn-arrow--compact:active{transform:scale(.97)}
