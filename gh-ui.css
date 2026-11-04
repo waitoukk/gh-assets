@@ -43,7 +43,7 @@
 /* ---------- native inquiry form ---------- */
 .gh-contact .gh-inquiry{display:grid;grid-template-columns:1fr 1fr;gap:16px 18px;width:100%}
 .gh-contact .gh-inquiry > p{margin:0;min-width:0}
-.gh-contact .gh-inquiry > p.full{grid-column:1 / -1}
+.gh-contact .gh-inquiry > .full{grid-column:1 / -1}
 .gh-contact .gh-inquiry label{display:block;font-size:13px;font-weight:600;color:#3a3a3a}
 .gh-contact .gh-inquiry .req{color:#ef4444;margin-left:2px}
 .gh-contact .gh-inquiry input[type="text"],
@@ -323,7 +323,7 @@
   to{transform:translateY(-.1em)}
 }
 /* file-upload hint: full width, left aligned, quieter */
-.gh-contact .gh-inquiry > p.full > .gh-file__hint{
+.gh-contact .gh-inquiry > .full > .gh-file__hint{
   display:block;width:100%;max-width:none;text-align:left;
   margin:8px 0 0;font-size:12.5px;line-height:1.55;color:#8a8a8a;
 }
