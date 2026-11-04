@@ -307,3 +307,5 @@
   from{transform:translateY(.1em)}
   to{transform:translateY(-.1em)}
 }
+/* keeps the arrow button sized to its content inside a grid cell */
+.gh-submit{display:flex;align-items:center}
