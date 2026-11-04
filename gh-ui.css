@@ -337,3 +337,8 @@ select:focus-visible{
   border-color:#171717;
   box-shadow:0 0 0 3px rgba(23,23,23,.08);
 }
+/* ---- breadcrumbs temporarily hidden (page crumbs + blog post crumbs) ---- */
+.crumbs,
+.jn-crumbs,
+nav[aria-label="Breadcrumb"],
+nav[aria-label="breadcrumb"]{display:none!important}
