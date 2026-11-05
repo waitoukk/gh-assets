@@ -403,3 +403,16 @@ main,.wp-site-blocks{max-width:100vw;overflow-x:clip}
   .hero__card{margin-left:14px;margin-right:14px}
   .gh-quote{font-size:13px;padding:9px 12px}
 }
+/* ---- responsive grids: the real source of the sideways scroll ----
+   .stats-band stayed 4 columns on phones (4 x min-content > viewport). */
+@media (max-width:760px){
+  .stats-band{grid-template-columns:repeat(2,1fr)}
+  .stats-band .stat{padding:22px 16px 24px;border-left:0}
+  .stats-band .stat:first-child,.stats-band .stat:last-child{padding-left:16px;padding-right:16px}
+  .facts{grid-template-columns:1fr;gap:16px}
+  .gh-p .spec-grid,.gh-p .guarantees,.gh-p .checks{grid-template-columns:1fr}
+  .gh-p .gallery,.gh-p .gallery--two{grid-template-columns:1fr}
+}
+@media (max-width:420px){
+  .stats-band{grid-template-columns:1fr}
+}
