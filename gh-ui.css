@@ -392,3 +392,14 @@ html,body{overflow-x:clip}
   .gh-actions{flex:0 0 auto}
   .gh-quote{white-space:nowrap}
 }
+/* ---- hard guarantee against horizontal overflow on phones ---- */
+html,body{max-width:100%;overflow-x:clip}
+main,.wp-site-blocks{max-width:100vw;overflow-x:clip}
+.gh-header{max-width:100vw;box-sizing:border-box}
+.gh-header .gh-inner{max-width:100%}
+.gh-actions{min-width:0}
+.gh-quote{max-width:46vw;overflow:hidden;text-overflow:ellipsis}
+@media (max-width:560px){
+  .hero__card{margin-left:14px;margin-right:14px}
+  .gh-quote{font-size:13px;padding:9px 12px}
+}
