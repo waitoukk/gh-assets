@@ -458,7 +458,7 @@ html{scroll-padding-top:88px}
   padding:9px 10px 9px 34px;border:0;background:none;border-radius:6px;
   font:inherit;font-size:14.5px;color:var(--ink);text-align:start;cursor:pointer;
 }
-.ghsel__opt span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ghsel__opt span{min-width:0;line-height:1.32;white-space:normal;overflow-wrap:anywhere}
 .ghsel__opt:hover,.ghsel__opt.is-active{background:#f1f0ed}
 .ghsel__opt.is-selected{font-weight:600}
 .ghsel__tick{
