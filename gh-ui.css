@@ -379,3 +379,16 @@ body.home [data-reveal]{opacity:1!important;transform:none!important;filter:none
 .sec-in{animation:none!important;opacity:0;transform:translateY(24px);
   transition:opacity .6s ease,transform .7s cubic-bezier(.16,1,.3,1)}
 .sec-in--on{opacity:1;transform:none}
+/* ---- mobile: never allow sideways scrolling ---- */
+html,body{overflow-x:clip}
+@media (max-width:782px){
+  .gh-drawer{max-width:100vw;box-sizing:border-box}
+  .gh-header .gh-wrap,
+  .gh-inner{max-width:100%;box-sizing:border-box}
+}
+@media (max-width:560px){
+  .gh-inner{flex-wrap:nowrap;gap:10px}
+  .gh-logo{flex:1 1 auto;min-width:0}
+  .gh-actions{flex:0 0 auto}
+  .gh-quote{white-space:nowrap}
+}
