@@ -396,11 +396,11 @@ html,body{max-width:100%}
 /* ---- mobile: no sideways scroll without breaking the sticky header ----
    (overflow-x:hidden/clip on html, body or .wp-site-blocks stops position:sticky
    from following, so the overflow is prevented at the source instead) */
-.gh-header{max-width:100vw;box-sizing:border-box}
-.gh-header .gh-inner{max-width:100%}
-.gh-actions{min-width:0}
-.gh-quote{max-width:46vw;overflow:hidden;text-overflow:ellipsis}
 @media (max-width:560px){
+  .gh-header{max-width:100vw;box-sizing:border-box}
+  .gh-header .gh-inner{max-width:100%}
+  .gh-actions{min-width:0}
+  .gh-quote{max-width:46vw}
   .hero__card{margin-left:14px;margin-right:14px}
   .gh-quote{font-size:13px;padding:9px 12px}
 }
