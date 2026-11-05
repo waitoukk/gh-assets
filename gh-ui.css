@@ -472,3 +472,19 @@ html{scroll-padding-top:88px}
 
 p.gh-inquiry__legend{margin:0 0 8px}
 p.gh-file__hint{margin:10px 0 0}
+
+/* ---------- underline link button (centre-out underline on hover) ---------- */
+.btn-ul{
+  position:relative;display:inline-block;
+  font:inherit;font-size:15.5px;font-weight:600;line-height:1.35;
+  color:var(--gray-700);background:none;border:0;padding:8px 0;cursor:pointer;
+  text-decoration:none;transition:color .4s cubic-bezier(.25,.8,.25,1);
+}
+.btn-ul::after{
+  content:"";position:absolute;left:50%;bottom:4px;width:0;height:2px;
+  background:currentColor;pointer-events:none;
+  transition:width .4s cubic-bezier(.25,.8,.25,1),left .4s cubic-bezier(.25,.8,.25,1);
+}
+.btn-ul:hover,.btn-ul:focus-visible{color:var(--ink)}
+.btn-ul:hover::after,.btn-ul:focus-visible::after{width:100%;left:0}
+.btn-ul:focus-visible{outline:2px solid var(--ink);outline-offset:4px;border-radius:2px}
