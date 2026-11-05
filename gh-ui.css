@@ -414,3 +414,10 @@ html,body{max-width:100%}
   .gh-p .gallery,.gh-p .gallery--two{grid-template-columns:1fr}
 }
 @media (max-width:420px){ .stats-band{grid-template-columns:1fr} }
+/* the header is fixed, so the page needs room for it */
+body{padding-top:74px}
+body.admin-bar{padding-top:106px}
+@media (max-width:560px){
+  body{padding-top:64px}
+  body.admin-bar{padding-top:110px}
+}
