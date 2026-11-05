@@ -419,10 +419,8 @@ html,body{max-width:100%}
    document down with `html{margin-top:32px}` while the bar is visible, and the
    header itself is shifted with top:32px — adding it again is what created the
    extra gap when the toolbar was open. */
-body{padding-top:78px}
 @media (max-width:560px){
-  body{padding-top:64px}
-}
+  }
 
 /* anchor jumps should not hide behind the fixed header */
 html{scroll-padding-top:88px}
