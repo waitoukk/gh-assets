@@ -512,3 +512,24 @@ p.gh-file__hint{margin:10px 0 0}
 @media (prefers-reduced-motion: reduce){
   .fhero__brand,.fhero h1,.fhero__rule,.fhero__sub,.fhero__cta,.fhero__meta,.fhero__media{animation:none!important}
 }
+
+/* ---------- split call-to-action (copy + checklist) ---------- */
+.gh-p .cta.cta--split{
+  display:grid;grid-template-columns:minmax(0,1fr);gap:36px;
+  padding:56px 0;background:var(--paper);border-radius:0;
+  align-items:start;justify-content:start;
+}
+.gh-p .cta.cta--split::before{display:none}
+.gh-p .cta.cta--split h2{
+  font-size:clamp(27px,3.2vw,42px);line-height:1.05;letter-spacing:-.028em;
+  font-weight:700;max-width:20ch;text-wrap:balance;margin:0;
+}
+.gh-p .cta.cta--split p{margin:14px 0 0;max-width:46ch;font-size:17px;line-height:1.55;color:var(--gray-600)}
+.gh-p .cta .cta-split__btn{margin-top:26px}
+.cta-split__list{list-style:none;margin:0;padding:0;display:grid;gap:16px}
+.cta-split__list li{display:flex;align-items:flex-start;gap:14px;font-size:16px;line-height:1.35;color:var(--ink)}
+.cta-split__list svg{flex:0 0 auto;width:20px;height:20px;margin-top:1px}
+@media (min-width:900px){
+  .gh-p .cta.cta--split{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:80px;padding:76px 0}
+  .cta-split__list{gap:18px;padding-top:6px}
+}
