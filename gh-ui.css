@@ -469,3 +469,6 @@ html{scroll-padding-top:88px}
 @media (max-width:560px){
   .ghsel__trigger{font-size:16px}   /* iOS zooms on <16px inputs */
 }
+
+p.gh-inquiry__legend{margin:0 0 8px}
+p.gh-file__hint{margin:10px 0 0}
