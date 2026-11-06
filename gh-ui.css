@@ -601,3 +601,6 @@ p.gh-file__hint{margin:10px 0 0}
   .fx__row{grid-template-columns:280px minmax(0,1fr) 230px;gap:64px}
   .fx__row--flip{grid-template-columns:230px minmax(0,1fr) 280px}
 }
+
+/* real photos inside the page galleries (the old placeholder box is gone) */
+.gh-p .shot > img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px;background:#ececec}
