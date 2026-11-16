@@ -607,3 +607,35 @@ p.gh-file__hint{margin:10px 0 0}
 .gh-p .gallery--four{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
 @media (min-width:900px){ .gh-p .gallery--four{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px} }
 .gh-p .gallery--four .shot > img{aspect-ratio:4/3}
+
+/* ---------- equipment cards: full 16:9 photo, panel flips in on hover ---------- */
+.eqcards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (min-width:1024px){ .eqcards{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px} }
+.eqcard{
+  position:relative;display:block;aspect-ratio:16/9;overflow:hidden;
+  border-radius:12px;background:#ececec;perspective:1000px;
+  transition:transform .6s cubic-bezier(.175,.885,.32,1.275),box-shadow .6s cubic-bezier(.175,.885,.32,1.275);
+}
+.eqcard__img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;
+  transition:transform .6s cubic-bezier(.175,.885,.32,1.275),opacity .45s ease;
+}
+.eqcard__panel{
+  position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:8px;
+  padding:22px;background:var(--paper,#f7f7f6);border:1px solid rgba(23,23,23,.1);border-radius:12px;
+  transform:rotateX(-90deg);transform-origin:bottom;backface-visibility:hidden;
+  transition:transform .6s cubic-bezier(.175,.885,.32,1.275);
+}
+.eqcard__panel h3{margin:0;font-size:17px;line-height:1.2;letter-spacing:-.02em;font-weight:600;color:var(--ink,#171717)}
+.eqcard__panel p{margin:0;font-size:13.5px;line-height:1.5;color:var(--gray-600,#4b4b4b)}
+.eqcard:hover,.eqcard:focus-visible{transform:scale(1.03);box-shadow:0 18px 40px -24px rgba(23,23,23,.55);outline:none}
+.eqcard:hover .eqcard__img,.eqcard:focus-visible .eqcard__img{transform:scale(1.06);opacity:.25}
+.eqcard:hover .eqcard__panel,.eqcard:focus-visible .eqcard__panel{transform:rotateX(0)}
+.eqcard:focus-visible{outline:2px solid var(--ink,#171717);outline-offset:3px}
+/* touch and small screens: no hover, so show photo + text stacked instead */
+@media (hover:none), (max-width:640px){
+  .eqcard{aspect-ratio:auto;display:flex;flex-direction:column}
+  .eqcard__img{position:static;width:100%;aspect-ratio:16/9;height:auto;transform:none!important;opacity:1!important}
+  .eqcard__panel{position:static;transform:none;border-radius:0 0 12px 12px;padding:16px}
+  .eqcard:hover{transform:none;box-shadow:none}
+}
