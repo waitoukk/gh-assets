@@ -602,3 +602,8 @@ p.gh-file__hint{margin:10px 0 0}
 
 /* real photos inside the page galleries (the old placeholder box is gone) */
 .gh-p .shot > img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px;background:#ececec}
+
+/* four-up photo gallery on the factory page */
+.gh-p .gallery--four{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+@media (min-width:900px){ .gh-p .gallery--four{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px} }
+.gh-p .gallery--four .shot > img{aspect-ratio:4/3}
