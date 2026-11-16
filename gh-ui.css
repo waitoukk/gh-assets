@@ -623,7 +623,7 @@ p.gh-file__hint{margin:10px 0 0}
 .eqcard__panel{
   position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:8px;
   padding:26px;
-  background:rgba(247,247,246,.72);
+  background:linear-gradient(rgba(247,247,246,.86),rgba(247,247,246,.74));
   -webkit-backdrop-filter:blur(16px) saturate(150%);
   backdrop-filter:blur(16px) saturate(150%);
   border:1px solid rgba(255,255,255,.55);border-radius:12px;
@@ -631,8 +631,8 @@ p.gh-file__hint{margin:10px 0 0}
   transform:rotateX(-90deg);transform-origin:bottom;backface-visibility:hidden;
   transition:transform .6s cubic-bezier(.175,.885,.32,1.275);
 }
-.eqcard__panel h3{margin:0;font-size:17px;line-height:1.2;letter-spacing:-.02em;font-weight:600;color:var(--ink,#171717)}
-.eqcard__panel p{margin:0;font-size:13.5px;line-height:1.5;color:var(--gray-600,#4b4b4b)}
+.eqcard__panel h3{margin:0;font-size:19px;line-height:1.2;letter-spacing:-.02em;font-weight:600;color:var(--ink,#171717)}
+.eqcard__panel p{margin:0;font-size:14.5px;line-height:1.55;color:var(--gray-600,#4b4b4b)}
 .eqcard:hover,.eqcard:focus-visible{transform:scale(1.03);box-shadow:0 18px 40px -24px rgba(23,23,23,.55);outline:none}
 .eqcard:hover .eqcard__img,.eqcard:focus-visible .eqcard__img{transform:scale(1.06);opacity:.25}
 .eqcard:hover .eqcard__panel,.eqcard:focus-visible .eqcard__panel{transform:rotateX(0)}
