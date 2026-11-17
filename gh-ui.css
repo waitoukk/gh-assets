@@ -649,3 +649,12 @@ p.gh-file__hint{margin:10px 0 0}
 @media (min-width:900px){ .gh-p .cats.cats--2{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px} }
 .gh-p .shot--wide > img{aspect-ratio:16/9;width:100%;object-fit:cover;border-radius:14px;display:block}
 .gh-p .shot--wide figcaption{margin-top:12px;font-size:14px;color:var(--gray-500)}
+
+/* custom page: numbered steps (the .step blocks live in gh-about.css which is not
+   loaded here, so the layout is defined locally) */
+.gh-p .steps .step{display:grid;grid-template-columns:64px minmax(0,1fr);gap:6px 22px;padding:26px 0;border-top:1px solid rgba(23,23,23,.1)}
+.gh-p .steps .step:first-child{border-top:0;padding-top:0}
+.gh-p .steps .step .n{grid-row:1 / span 2;font-size:12px;font-weight:600;color:#b3b0ac;padding-top:7px}
+.gh-p .steps .step h3{grid-column:2;margin:0;font-size:19px;line-height:1.25;letter-spacing:-.02em;font-weight:600}
+.gh-p .steps .step p{grid-column:2;margin:6px 0 0;font-size:15px;line-height:1.6;color:var(--gray-600)}
+@media (max-width:640px){ .gh-p .steps .step{grid-template-columns:44px minmax(0,1fr);gap:4px 14px} }
