@@ -670,7 +670,7 @@ p.gh-file__hint{margin:10px 0 0}
 /* --- hero: one giant cropped shape, no photo --- */
 .chero{position:relative;overflow:hidden;background:var(--paper,#f7f7f6);padding:clamp(56px,8vw,104px) 0 clamp(44px,7vw,88px)}
 .chero__shape{
-  position:absolute;right:-24vw;top:-14vh;
+  position:absolute;right:-24vw;top:-120px;
   width:min(66vw,100vh);height:min(118vh,900px);
   background:#171717;transform:rotate(-9deg);
   border-radius:48% 48% 16% 16% / 38% 38% 10% 10%;
@@ -697,7 +697,7 @@ p.gh-file__hint{margin:10px 0 0}
 .chero__facts b{color:#171717;font-weight:600}
 @media (max-width:899px){
   .chero{padding-bottom:calc(clamp(160px,52vw,280px))}
-  .chero__shape{right:-32vw;top:auto;bottom:-26vh;width:150vw;height:66vh;transform:rotate(-7deg)}
+  .chero__shape{right:-32vw;top:auto;bottom:-140px;width:150vw;height:66vh;transform:rotate(-7deg)}
   .chero h1{max-width:18ch}
 }
 
