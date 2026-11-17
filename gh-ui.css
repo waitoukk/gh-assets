@@ -696,8 +696,8 @@ p.gh-file__hint{margin:10px 0 0}
 .chero__facts{display:flex;flex-wrap:wrap;gap:10px 30px;margin-top:42px;max-width:50ch;font-size:14px;color:#4b4b4b}
 .chero__facts b{color:#171717;font-weight:600}
 @media (max-width:899px){
-  .chero{padding-bottom:calc(clamp(160px,52vw,280px))}
-  .chero__shape{right:-32vw;top:auto;bottom:-140px;width:150vw;height:66vh;transform:rotate(-7deg)}
+  .chero{padding-bottom:clamp(190px,56vw,300px)}
+  .chero__shape{right:-40vw;top:auto;bottom:-70px;width:150vw;height:42vw;transform:rotate(-7deg)}
   .chero h1{max-width:18ch}
 }
 
