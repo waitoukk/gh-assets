@@ -714,7 +714,7 @@ p.gh-file__hint{margin:10px 0 0}
 .bigcta{
   display:block;position:relative;text-decoration:none;
   background:var(--paper,#f7f7f6);color:#171717;
-  padding:clamp(40px,6vw,72px) clamp(20px,4vw,44px) 0;
+  padding:clamp(40px,6vw,72px) clamp(20px,4vw,44px) clamp(12px,2vw,26px);
   border-top:1px solid rgba(23,23,23,.12);
   transition:background .18s ease,color .18s ease;
   overflow:hidden;
@@ -722,7 +722,7 @@ p.gh-file__hint{margin:10px 0 0}
 .bigcta__note{display:block;max-width:34ch;font-size:15px;line-height:1.5;opacity:.75}
 .bigcta__word{
   display:block;margin-top:clamp(28px,7vh,72px);
-  font-size:clamp(72px,21vw,300px);line-height:.8;letter-spacing:-.045em;font-weight:700;
+  font-size:clamp(72px,20vw,290px);line-height:.86;letter-spacing:-.045em;font-weight:700;
   white-space:nowrap;
 }
 .bigcta__arrow{position:absolute;top:clamp(28px,4vw,44px);right:clamp(20px,4vw,44px);width:clamp(32px,4vw,48px);height:auto}
