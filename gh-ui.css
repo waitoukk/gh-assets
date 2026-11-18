@@ -811,3 +811,26 @@ p.gh-file__hint{margin:10px 0 0}
 @media (prefers-reduced-motion: reduce){
   .feat01__d,.feat01__d p,.feat01__img{transition:none}
 }
+
+/* ---------- Notion-derived type scale (palette unchanged, red = single accent) ---------- */
+.custom-page{font-size:16px;line-height:1.5}
+.custom-page h1{font-weight:700;line-height:1.02;letter-spacing:-.033em}
+.custom-page .head h2{font-size:clamp(22px,2.3vw,26px);font-weight:700;line-height:1.23;letter-spacing:-.024em}
+.custom-page .head h3{font-size:clamp(19px,1.8vw,22px);font-weight:700;line-height:1.27;letter-spacing:-.011em}
+.custom-page .head p{font-size:16px;line-height:1.5;color:#4b4b4b}
+.custom-page p{line-height:1.5}
+.custom-page .tbl{font-size:15px;line-height:1.33}
+.custom-page .tbl td,.custom-page .tbl th{padding:12px 16px}
+.custom-page .checks b{font-size:16px;font-weight:600;letter-spacing:-.006em}
+.custom-page .checks span{font-size:15px;line-height:1.33}
+.custom-page .steps .step h3{font-size:clamp(20px,1.9vw,22px);font-weight:700;line-height:1.27;letter-spacing:-.011em}
+.custom-page .steps .step p{font-size:16px;line-height:1.5}
+.custom-page .mats .mat h3{font-size:20px;font-weight:600;line-height:1.4;letter-spacing:-.006em;margin-bottom:10px}
+.custom-page .mats .mat p{font-size:16px;line-height:1.5}
+.custom-page .tile figcaption b{font-size:15px;font-weight:600;letter-spacing:-.006em}
+.custom-page .tile figcaption span{font-size:14px;line-height:1.43;color:#4b4b4b}
+.custom-page .chero2__btn{font-size:16px;font-weight:500}
+.custom-page .chero2__sub{font-size:16px;line-height:1.5}
+/* the single accent: the rotating line */
+.custom-page .chero2__track > span{color:#ef4444}
+.custom-page a:focus-visible{outline-color:#ef4444}
