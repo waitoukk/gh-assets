@@ -730,7 +730,7 @@ p.gh-file__hint{margin:10px 0 0}
 @media (max-width:560px){ .bigcta__word{font-size:clamp(56px,19vw,110px)} }
 
 /* --- hero v2: centred statement with a rotating line --- */
-.chero2{background:var(--paper,#f7f7f6);padding:clamp(52px,9vw,112px) clamp(20px,5vw,40px) clamp(48px,7vw,88px);text-align:center}
+.chero2{background:var(--paper,#f7f7f6);padding:clamp(52px,9vw,104px) clamp(20px,5vw,40px) clamp(36px,4.5vw,60px);text-align:center}
 .chero2__inner{display:flex;flex-direction:column;align-items:center;gap:clamp(18px,2.6vw,28px);max-width:920px;margin:0 auto}
 .chero2__pill{
   display:inline-flex;align-items:center;gap:10px;padding:9px 16px;border-radius:999px;
