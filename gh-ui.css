@@ -772,3 +772,42 @@ p.gh-file__hint{margin:10px 0 0}
 .chero2__btn--dark:hover{background:#000;gap:13px}
 .chero2 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 @media (prefers-reduced-motion: reduce){ .chero2__track{animation:none} }
+
+/* ---------- feature tabs: list on the left, crossfading media on the right ---------- */
+.feat01{display:grid;grid-template-columns:minmax(0,1fr);gap:28px}
+@media (min-width:900px){
+  .feat01{grid-template-columns:minmax(0,1fr) minmax(0,1.06fr);gap:56px;align-items:center}
+}
+.feat01__nav{display:flex;flex-direction:column;gap:2px}
+.feat01__btn{
+  display:block;width:100%;text-align:left;padding:14px 16px;border:0;border-radius:6px;
+  background:none;font:inherit;cursor:pointer;transition:background .25s ease;
+}
+.feat01__btn:hover{background:rgba(23,23,23,.04)}
+.feat01__btn[aria-current="true"]{background:rgba(23,23,23,.06)}
+.feat01__t{display:block;font-size:17px;line-height:1.3;color:#4b4b4b;transition:color .25s ease}
+.feat01__btn[aria-current="true"] .feat01__t{color:#171717;font-weight:600}
+.feat01__d{
+  display:grid;grid-template-rows:0fr;
+  transition:grid-template-rows .32s cubic-bezier(.22,1,.36,1);
+}
+.feat01__btn[aria-current="true"] .feat01__d{grid-template-rows:1fr}
+.feat01__d > span{overflow:hidden}
+.feat01__d p{
+  margin:8px 0 0;font-size:14.5px;line-height:1.55;color:#4b4b4b;
+  opacity:0;transition:opacity .3s ease .05s;
+}
+.feat01__btn[aria-current="true"] .feat01__d p{opacity:1}
+.feat01__media{
+  position:relative;overflow:hidden;border-radius:14px;background:#ececec;
+  aspect-ratio:4/3;min-height:260px;
+}
+@media (min-width:900px){ .feat01__media{aspect-ratio:3/2;min-height:420px} }
+.feat01__img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  opacity:0;transition:opacity .5s cubic-bezier(.22,1,.36,1);
+}
+.feat01__img.is-on{opacity:1}
+@media (prefers-reduced-motion: reduce){
+  .feat01__d,.feat01__d p,.feat01__img{transition:none}
+}
