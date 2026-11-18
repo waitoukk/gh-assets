@@ -834,3 +834,7 @@ p.gh-file__hint{margin:10px 0 0}
 /* the single accent: the rotating line */
 .custom-page .chero2__track > span{color:#ef4444}
 .custom-page a:focus-visible{outline-color:#ef4444}
+
+/* beat .gh-p a{color:inherit} so the filled button keeps its label colour */
+.custom-page .chero2__btn--dark{color:#fff}
+.custom-page .chero2__btn--line{color:#171717}
