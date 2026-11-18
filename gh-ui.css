@@ -843,3 +843,7 @@ p.gh-file__hint{margin:10px 0 0}
 .custom-page .cat__body h3{font-size:20px;font-weight:600;line-height:1.4;letter-spacing:-.006em;margin:0 0 6px}
 .custom-page .cat__body p{font-size:16px;line-height:1.5;color:#4b4b4b;margin:0}
 .custom-page .cat__link{font-size:15px;font-weight:500}
+
+/* custom page: wider container (home is 1340; this page runs 1400) */
+.custom-page .wrap{max-width:1400px}
+.custom-page .chero2__inner{max-width:1040px}
