@@ -838,3 +838,8 @@ p.gh-file__hint{margin:10px 0 0}
 /* beat .gh-p a{color:inherit} so the filled button keeps its label colour */
 .custom-page .chero2__btn--dark{color:#fff}
 .custom-page .chero2__btn--line{color:#171717}
+
+/* card titles follow the Notion "title" token */
+.custom-page .cat__body h3{font-size:20px;font-weight:600;line-height:1.4;letter-spacing:-.006em;margin:0 0 6px}
+.custom-page .cat__body p{font-size:16px;line-height:1.5;color:#4b4b4b;margin:0}
+.custom-page .cat__link{font-size:15px;font-weight:500}
