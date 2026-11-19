@@ -857,10 +857,10 @@ p.gh-file__hint{margin:10px 0 0}
 
 /* ---------- FAQ: intro on the left, accordion on the right ---------- */
 .faq2{display:grid;grid-template-columns:minmax(0,1fr);gap:32px}
-@media (min-width:900px){ .faq2{grid-template-columns:minmax(0,1fr) minmax(0,1.12fr);gap:80px;align-items:start} }
+@media (min-width:900px){ .faq2{grid-template-columns:minmax(0,1fr) minmax(0,1.12fr);gap:64px;align-items:start} }
 .faq2__eyebrow{margin:0 0 10px;font-size:14px;font-weight:400;color:#6b6b6b}
 .faq2__intro h2{margin:0;font-size:clamp(26px,3vw,40px);font-weight:700;line-height:1.1;letter-spacing:-.025em;max-width:17ch;text-wrap:balance}
-.faq2__lead{margin:18px 0 0;font-size:16px;line-height:1.55;color:#4b4b4b;max-width:46ch}
+.faq2__lead{margin:18px 0 0;font-size:16px;line-height:1.55;color:#4b4b4b;max-width:52ch}
 .faq2__more{margin:26px 0 0;font-size:15px;color:#4b4b4b}
 .faq2__more a{color:#171717;font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
 .faq2__more a:hover{color:#ef4444;text-decoration-color:#ef4444}
@@ -876,5 +876,5 @@ p.gh-file__hint{margin:10px 0 0}
 .faq2__item[open] summary svg{transform:rotate(180deg)}
 .faq2__item[open] summary{color:#171717}
 .faq2__a{padding:0 44px 22px 0}
-.faq2__a p{margin:0;font-size:16px;line-height:1.6;color:#4b4b4b;max-width:62ch}
+.faq2__a p{margin:0;font-size:16px;line-height:1.6;color:#4b4b4b;max-width:70ch}
 @media (prefers-reduced-motion: reduce){ .faq2__item summary svg{transition:none} }
