@@ -889,3 +889,6 @@ p.gh-file__hint{margin:10px 0 0}
   .gh-p.custom-page .cat{display:grid;grid-template-columns:1fr;gap:14px}
   .gh-p.custom-page .cat__media{max-width:260px}
 }
+
+/* step numbers in the brand red */
+.gh-p.custom-page .steps .step .n{color:#ef4444}
