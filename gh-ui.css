@@ -930,3 +930,72 @@ p.gh-file__hint{margin:10px 0 0}
 /* factory page: 1400 container, hero copy aligned to it */
 .gh-p.gh-wide .wrap{max-width:1400px}
 .gh-p.gh-wide .fhero__left{padding-left:max(24px,calc(50vw - 676px))}
+
+/* ============ About-parity layer for the custom page ============
+   Same language as /about/: #f9f9f9 ground, 42/600 headings, red star
+   eyebrows, white hairline cards (16px radius, hover lift), steps ruled
+   by a hairline with the red number sitting on it. */
+.gh-p.custom-page{background:#f9f9f9}
+.gh-p.custom-page .band,
+.gh-p.custom-page .band--white{padding:88px 0;background:transparent}
+.gh-p.custom-page .band--tight{padding:0 0 88px}
+@media (max-width:760px){
+  .gh-p.custom-page .band,
+  .gh-p.custom-page .band--white{padding:56px 0}
+  .gh-p.custom-page .band--tight{padding:0 0 56px}
+}
+
+/* eyebrow */
+.cp-eyebrow{display:flex;align-items:center;gap:8px;margin:0 0 18px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#4b4b4b}
+.cp-eyebrow i{font-style:normal;color:#ef4444;font-size:15px;line-height:1;animation:cp-spin 9s linear infinite}
+@keyframes cp-spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion: reduce){ .cp-eyebrow i{animation:none} }
+
+/* headings + leads */
+.gh-p.custom-page .head{margin-bottom:44px}
+.gh-p.custom-page .head h2{font-size:clamp(30px,3.2vw,42px);font-weight:600;line-height:1.08;letter-spacing:-.02em;max-width:26ch;text-wrap:balance;margin:0 0 16px}
+.gh-p.custom-page .head h3{font-size:19px;font-weight:600;line-height:1.3;letter-spacing:-.01em;margin:0 0 8px}
+.gh-p.custom-page .head p{font-size:15.5px;line-height:1.62;color:#4b4b4b;max-width:66ch;margin:0}
+
+/* path cards: white, hairline, hover lift */
+.gh-p.custom-page .cats{gap:16px}
+.gh-p.custom-page .cat{
+  background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:20px;
+  grid-template-columns:180px minmax(0,1fr);gap:22px;align-items:start;
+  transition:transform .35s cubic-bezier(.16,1,.3,1),box-shadow .35s cubic-bezier(.16,1,.3,1),border-color .35s ease;
+}
+.gh-p.custom-page .cat:hover{transform:translateY(-4px);box-shadow:0 20px 44px -26px rgba(23,23,23,.45);border-color:#fecaca}
+.gh-p.custom-page .cat__media{aspect-ratio:1/1;border-radius:12px}
+.gh-p.custom-page .cat__body h3{font-size:17px;font-weight:600;letter-spacing:-.01em;margin:0 0 8px}
+.gh-p.custom-page .cat__body p{font-size:14px;line-height:1.62;color:#4b4b4b;margin:0}
+.gh-p.custom-page .cat__link{font-size:14px;font-weight:600}
+.gh-p.custom-page .cat__link:hover{color:#dc2626}
+
+/* feature tabs inside a white card, selected row tinted like About's icon tiles */
+.gh-p.custom-page .feat01__nav{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:12px;gap:2px}
+.gh-p.custom-page .feat01__btn{border-radius:10px;padding:12px 14px}
+.gh-p.custom-page .feat01__btn[aria-current="true"]{background:#fef2f2}
+.gh-p.custom-page .feat01__t{font-size:16px;font-weight:600;color:#171717}
+.gh-p.custom-page .feat01__btn[aria-current="true"] .feat01__t{font-weight:600;color:#171717}
+.gh-p.custom-page .feat01__d p{font-size:14px;line-height:1.62;color:#4b4b4b}
+.gh-p.custom-page .feat01__media{border-radius:16px}
+
+/* steps: hairline rule with the red number on it */
+.gh-p.custom-page .steps{gap:0}
+.gh-p.custom-page .steps .step{position:relative;display:block;border-top:1px solid #e5e7eb;padding:26px 0 0;margin-top:34px}
+.gh-p.custom-page .steps .step:first-child{margin-top:0}
+.gh-p.custom-page .steps .step .n{
+  position:absolute;top:-9px;left:0;background:#f9f9f9;padding-right:12px;
+  font-size:13px;font-weight:600;color:#ef4444;letter-spacing:.04em;
+}
+.gh-p.custom-page .steps .step h3{font-size:19px;font-weight:600;line-height:1.3;letter-spacing:-.01em;margin:0 0 10px}
+.gh-p.custom-page .steps .step p{font-size:15px;line-height:1.7;color:#4b4b4b;margin:0;max-width:72ch}
+
+/* FAQ to the same scale */
+.gh-p.custom-page .faq2__intro h2{font-size:clamp(30px,3.2vw,42px);font-weight:600;line-height:1.08;letter-spacing:-.02em;max-width:18ch}
+.gh-p.custom-page .faq2__lead{font-size:15.5px;line-height:1.62}
+.gh-p.custom-page .faq2__item summary{font-size:17px;font-weight:600;letter-spacing:-.01em}
+.gh-p.custom-page .faq2__a p{font-size:15px;line-height:1.7}
+
+/* closing band */
+.gh-p.custom-page .bigcta{background:#f9f9f9;border-top:1px solid #e5e7eb}
