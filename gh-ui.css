@@ -999,3 +999,7 @@ p.gh-file__hint{margin:10px 0 0}
 
 /* closing band */
 .gh-p.custom-page .bigcta{background:#f9f9f9;border-top:1px solid #e5e7eb}
+
+/* hero keeps the two-weight contrast approved earlier (regular line, bold rotating word) */
+.gh-p.custom-page .chero2 h1{font-weight:400;letter-spacing:-.028em}
+.gh-p.custom-page .chero2__track > span{font-weight:700}
