@@ -974,7 +974,7 @@ p.gh-file__hint{margin:10px 0 0}
 /* feature tabs inside a white card, selected row tinted like About's icon tiles */
 .gh-p.custom-page .feat01__nav{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:12px;gap:2px}
 .gh-p.custom-page .feat01__btn{border-radius:10px;padding:12px 14px}
-.gh-p.custom-page .feat01__btn[aria-current="true"]{background:#fef2f2}
+.gh-p.custom-page .feat01__btn[aria-current="true"]{background:rgba(23,23,23,.06)}
 .gh-p.custom-page .feat01__t{font-size:16px;font-weight:600;color:#171717}
 .gh-p.custom-page .feat01__btn[aria-current="true"] .feat01__t{font-weight:600;color:#171717}
 .gh-p.custom-page .feat01__d p{font-size:14px;line-height:1.62;color:#4b4b4b}
