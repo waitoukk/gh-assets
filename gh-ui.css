@@ -1078,8 +1078,8 @@ p.gh-file__hint{margin:10px 0 0}
 
 /* NDA note under the artwork upload */
 .gh-inquiry .gh-inquiry__nda{
-  display:flex;gap:8px;align-items:flex-start;
-  margin:12px 0 0;font-size:13.5px;line-height:1.55;color:#4b4b4b;
+  display:block;
+  margin:12px 0 0;font-size:13.5px;line-height:1.6;color:#4b4b4b;
   background:#f7f7f6;border:1px solid #ececeb;border-radius:10px;padding:11px 14px;
 }
 .gh-inquiry .gh-inquiry__nda b{color:#171717;font-weight:600}
