@@ -1024,3 +1024,63 @@ p.gh-file__hint{margin:10px 0 0}
   .chero2__slide:first-child img{object-position:left center}  /* keep the banner lettering in frame */
 }
 @media (prefers-reduced-motion: reduce){ .chero2__slide{transition:none} }
+
+/* ---------- calendar (day picker) ---------- */
+.ghcal{position:relative;display:block;margin-top:7px}
+.ghcal__trigger{
+  display:flex;align-items:center;gap:10px;width:100%;
+  padding:12px 14px;border:1px solid rgba(23,23,23,.16);border-radius:8px;background:#fff;
+  font:inherit;font-size:15px;color:#171717;text-align:left;cursor:pointer;
+  transition:border-color .2s ease,box-shadow .2s ease;
+}
+.ghcal__trigger:hover{border-color:rgba(23,23,23,.3)}
+.ghcal__trigger[aria-expanded="true"]{border-color:#171717;box-shadow:0 0 0 3px rgba(23,23,23,.07)}
+.ghcal__icon{width:17px;height:17px;flex:0 0 auto;color:#6b6b6b}
+.ghcal__value{flex:1 1 auto;color:#171717}
+.ghcal__value.is-empty{color:#8a8a8a}
+.ghcal__pop{
+  position:absolute;top:calc(100% + 8px);left:0;z-index:60;width:308px;
+  background:#fff;border:1px solid #e5e7eb;border-radius:12px;
+  box-shadow:0 24px 48px -24px rgba(23,23,23,.35);padding:10px;
+}
+.ghcal__pop[hidden]{display:none}
+.ghcal__head{position:relative;display:flex;align-items:center;justify-content:center;height:36px;margin:0 32px 4px}
+.ghcal__cap{font-size:14px;font-weight:600;letter-spacing:-.01em}
+.ghcal__nav{
+  position:absolute;top:0;width:32px;height:32px;display:flex;align-items:center;justify-content:center;
+  border:0;border-radius:6px;background:none;color:#8a8a8a;cursor:pointer;
+}
+.ghcal__nav:hover{background:#f3f4f6;color:#171717}
+.ghcal__nav svg{width:15px;height:15px}
+.ghcal__nav[data-ghcal-prev]{left:0}
+.ghcal__nav[data-ghcal-next]{right:0}
+.ghcal__week,.ghcal__grid{display:grid;grid-template-columns:repeat(7,1fr)}
+.ghcal__week span{height:29px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;color:#9a9a9a}
+.ghcal__day{
+  position:relative;height:36px;display:flex;align-items:center;justify-content:center;
+  border:0;background:none;border-radius:8px;font:inherit;font-size:14px;color:#171717;cursor:pointer;
+  transition:background-color .15s ease,color .15s ease;
+}
+.ghcal__day:hover{background:#f3f4f6}
+.ghcal__day.is-out{color:#c9c9c9}
+.ghcal__day.is-disabled{color:#d4d4d4;cursor:not-allowed;text-decoration:line-through}
+.ghcal__day.is-disabled:hover{background:none}
+.ghcal__day.is-today::after{
+  content:"";position:absolute;left:50%;bottom:4px;width:3px;height:3px;border-radius:50%;
+  background:#171717;transform:translateX(-50%);
+}
+.ghcal__day.is-selected{background:#171717;color:#fff}
+.ghcal__day.is-selected::after{background:#fff}
+.ghcal__foot{display:flex;justify-content:space-between;gap:8px;margin-top:6px;padding-top:8px;border-top:1px solid #f0f0ef}
+.ghcal__clear,.ghcal__today{border:0;background:none;font:inherit;font-size:13px;color:#6b6b6b;cursor:pointer;padding:4px 6px;border-radius:6px}
+.ghcal__clear:hover,.ghcal__today:hover{background:#f3f4f6;color:#171717}
+@media (max-width:520px){ .ghcal__pop{width:min(308px,calc(100vw - 48px))} }
+
+/* NDA note under the artwork upload */
+.gh-inquiry .gh-inquiry__nda{
+  display:flex;gap:8px;align-items:flex-start;
+  margin:12px 0 0;font-size:13.5px;line-height:1.55;color:#4b4b4b;
+  background:#f7f7f6;border:1px solid #ececeb;border-radius:10px;padding:11px 14px;
+}
+.gh-inquiry .gh-inquiry__nda b{color:#171717;font-weight:600}
+.gh-inquiry .gh-inquiry__nda span{flex:0 0 auto;font-size:14px;line-height:1.4}
