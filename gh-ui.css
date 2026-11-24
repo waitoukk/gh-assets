@@ -1039,7 +1039,7 @@ p.gh-file__hint{margin:10px 0 0}
 .ghcal__value{flex:1 1 auto;color:#171717}
 .ghcal__value.is-empty{color:#8a8a8a}
 .ghcal__pop{
-  position:absolute;top:calc(100% + 8px);left:0;z-index:60;width:308px;
+  display:block;position:absolute;top:calc(100% + 8px);left:0;z-index:60;width:308px;
   background:#fff;border:1px solid #e5e7eb;border-radius:12px;
   box-shadow:0 24px 48px -24px rgba(23,23,23,.35);padding:10px;
 }
@@ -1055,6 +1055,7 @@ p.gh-file__hint{margin:10px 0 0}
 .ghcal__nav[data-ghcal-prev]{left:0}
 .ghcal__nav[data-ghcal-next]{right:0}
 .ghcal__week,.ghcal__grid{display:grid;grid-template-columns:repeat(7,1fr)}
+.ghcal__head,.ghcal__foot{display:flex}
 .ghcal__week span{height:29px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;color:#9a9a9a}
 .ghcal__day{
   position:relative;height:36px;font-weight:400;display:flex;align-items:center;justify-content:center;
