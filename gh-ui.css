@@ -1028,7 +1028,7 @@ p.gh-file__hint{margin:10px 0 0}
 /* ---------- calendar (day picker) ---------- */
 .ghcal{position:relative;display:block;margin-top:7px}
 .ghcal__trigger{
-  display:flex;align-items:center;gap:10px;width:100%;
+  display:flex;align-items:center;gap:10px;width:100%;font-weight:400;
   padding:12px 14px;border:1px solid rgba(23,23,23,.16);border-radius:8px;background:#fff;
   font:inherit;font-size:15px;color:#171717;text-align:left;cursor:pointer;
   transition:border-color .2s ease,box-shadow .2s ease;
@@ -1057,7 +1057,7 @@ p.gh-file__hint{margin:10px 0 0}
 .ghcal__week,.ghcal__grid{display:grid;grid-template-columns:repeat(7,1fr)}
 .ghcal__week span{height:29px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;color:#9a9a9a}
 .ghcal__day{
-  position:relative;height:36px;display:flex;align-items:center;justify-content:center;
+  position:relative;height:36px;font-weight:400;display:flex;align-items:center;justify-content:center;
   border:0;background:none;border-radius:8px;font:inherit;font-size:14px;color:#171717;cursor:pointer;
   transition:background-color .15s ease,color .15s ease;
 }
