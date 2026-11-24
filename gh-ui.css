@@ -1096,3 +1096,6 @@ p.gh-file__hint{margin:10px 0 0}
 .ghsel__trigger[aria-expanded="true"],
 .ghsel__trigger:focus-visible{border-color:#171717;box-shadow:0 0 0 3px rgba(23,23,23,.07);outline:none}
 .ghsel__chev{color:#6b6b6b}
+
+/* empty state of the custom select */
+.ghsel__value.is-placeholder{color:#8a8a8a}
