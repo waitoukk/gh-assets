@@ -1085,3 +1085,14 @@ p.gh-file__hint{margin:10px 0 0}
 }
 .gh-inquiry .gh-inquiry__nda b{color:#171717;font-weight:600}
 .gh-inquiry .gh-inquiry__nda span{flex:0 0 auto;font-size:14px;line-height:1.4}
+
+/* selects now match the calendar trigger (thin border, same metrics) */
+.ghsel__trigger{
+  min-height:0;padding:12px 14px;font-size:15px;line-height:1.4;
+  border:1px solid rgba(23,23,23,.16);border-radius:8px;box-shadow:none;
+  transition:border-color .2s ease,box-shadow .2s ease;
+}
+.ghsel__trigger:hover{border-color:rgba(23,23,23,.3)}
+.ghsel__trigger[aria-expanded="true"],
+.ghsel__trigger:focus-visible{border-color:#171717;box-shadow:0 0 0 3px rgba(23,23,23,.07);outline:none}
+.ghsel__chev{color:#6b6b6b}
