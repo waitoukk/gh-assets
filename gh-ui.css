@@ -1014,8 +1014,9 @@ p.gh-file__hint{margin:10px 0 0}
   position:relative;width:100%;max-width:1400px;margin:clamp(36px,5vw,64px) auto 0;
   aspect-ratio:2560/884;border-radius:16px;overflow:hidden;background:#e7e6e4;
 }
-.chero2__slide{position:absolute;inset:0;opacity:0;transition:opacity .9s cubic-bezier(.22,1,.36,1);display:block}
-.chero2__slide.is-on{opacity:1}
+.chero2__slide{position:absolute;inset:0;opacity:0;pointer-events:none;transition:opacity .9s cubic-bezier(.22,1,.36,1);display:block}
+.chero2__slide:first-child{opacity:1}   /* base layer: avoids a grey frame mid-fade */
+.chero2__slide.is-on{opacity:1;pointer-events:auto}
 .chero2__slide img{width:100%;height:100%;object-fit:cover;display:block}
 .chero2__slide:focus-visible{outline:2px solid #171717;outline-offset:-4px}
 @media (max-width:760px){ .chero2__media{aspect-ratio:16/9;border-radius:12px} }
