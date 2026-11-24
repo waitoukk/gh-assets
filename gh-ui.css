@@ -1104,5 +1104,5 @@ p.gh-file__hint{margin:10px 0 0}
 .ghsel.is-invalid .ghsel__trigger{border-color:#dc2626}
 .ghsel.is-invalid .ghsel__trigger:focus-visible,
 .ghsel.is-invalid .ghsel__trigger[aria-expanded="true"]{border-color:#dc2626;box-shadow:0 0 0 3px rgba(220,38,38,.12)}
-.ghsel__err{display:block;margin-top:6px;font-size:13px;line-height:1.4;color:#dc2626}
+.ghsel__err{display:block;margin-top:6px;font-size:13px;font-style:normal;font-weight:500;line-height:1.4;color:#dc2626}
 .ghsel__err[hidden]{display:none}
