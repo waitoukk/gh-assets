@@ -1019,5 +1019,8 @@ p.gh-file__hint{margin:10px 0 0}
 .chero2__slide.is-on{opacity:1;pointer-events:auto}
 .chero2__slide img{width:100%;height:100%;object-fit:cover;display:block}
 .chero2__slide:focus-visible{outline:2px solid #171717;outline-offset:-4px}
-@media (max-width:760px){ .chero2__media{aspect-ratio:16/9;border-radius:12px} }
+@media (max-width:760px){
+  .chero2__media{aspect-ratio:2/1;border-radius:12px}
+  .chero2__slide:first-child img{object-position:left center}  /* keep the banner lettering in frame */
+}
 @media (prefers-reduced-motion: reduce){ .chero2__slide{transition:none} }
