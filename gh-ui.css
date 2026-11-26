@@ -873,97 +873,19 @@ p.gh-file__hint{margin:10px 0 0}
 .faq2__a p{margin:0;font-size:16px;line-height:1.6;color:#4b4b4b;max-width:70ch}
 @media (prefers-reduced-motion: reduce){ .faq2__item summary svg{transition:none} }
 
-/* custom page: path cards get a square thumbnail beside the copy */
-.gh-p.custom-page .cat__media{aspect-ratio:1/1;border-radius:10px}
-.gh-p.custom-page .cat__media img{width:100%;height:100%;object-fit:cover;display:block}
-@media (min-width:760px){
-  .gh-p.custom-page .cat{display:grid;grid-template-columns:230px minmax(0,1fr);gap:26px;align-items:start}
-}
-@media (max-width:759px){
-  .gh-p.custom-page .cat{display:grid;grid-template-columns:1fr;gap:14px}
-  .gh-p.custom-page .cat__media{max-width:260px}
-}
-
-/* step numbers in the brand red */
-.gh-p.custom-page .steps .step .n{color:#ef4444}
-
-/* ---------- office map: address beside a click-to-load map ---------- */
-.gh-map{display:grid;grid-template-columns:minmax(0,1fr);gap:28px}
-@media (min-width:900px){ .gh-map{grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);gap:56px;align-items:center} }
-.gh-map__addr{margin:16px 0 0;font-size:17px;line-height:1.6;color:#171717;font-style:normal;max-width:38ch}
-.gh-map__addr em{display:block;margin-top:10px;font-style:normal;font-size:15px;color:#4b4b4b}
-.gh-map__meta{margin:22px 0 0;padding:0;list-style:none;display:grid;gap:8px;font-size:15px;color:#4b4b4b}
-.gh-map__meta li{display:flex;gap:10px;align-items:baseline}
-.gh-map__meta svg{flex:0 0 auto;width:16px;height:16px;color:#6b6b6b;transform:translateY(2px)}
-.gh-map__frame{position:relative;overflow:hidden;border-radius:12px;background:#e7e6e4;aspect-ratio:16/10;min-height:300px}
-.gh-map__frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
-.gh-map__load{
-  position:absolute;inset:0;width:100%;border:0;cursor:pointer;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;
-  background:
-    repeating-linear-gradient(0deg,rgba(23,23,23,.05) 0 1px,transparent 1px 56px),
-    repeating-linear-gradient(90deg,rgba(23,23,23,.05) 0 1px,transparent 1px 56px),
-    #efeeec;
-  font:inherit;color:#171717;
-}
-.gh-map__load b{font-size:16px;font-weight:600}
-.gh-map__load span{font-size:13.5px;color:#6b6b6b}
-.gh-map__btn{
-  display:inline-flex;align-items:center;gap:9px;margin-top:4px;
-  padding:12px 20px;border-radius:8px;background:#171717;color:#fff;
-  font-size:15px;font-weight:600;transition:background .2s ease,gap .3s cubic-bezier(.16,1,.3,1);
-}
-.gh-map__load:hover .gh-map__btn{background:#000;gap:14px}
-.gh-map__btn svg{width:16px;height:16px}
-
-/* solo map: one iframe, no copy */
-.gh-map__frame--solo{aspect-ratio:auto;min-height:0;border-radius:12px;background:#e7e6e4}
-.gh-map__frame--solo iframe{position:static;display:block;width:100%;height:450px;border:0}
-@media (max-width:640px){ .gh-map__frame--solo iframe{height:320px} }
-
-/* factory page: 1400 container, hero copy aligned to it */
-.gh-p.gh-wide .wrap{max-width:1400px}
-.gh-p.gh-wide .fhero__left{padding-left:max(24px,calc(50vw - 676px))}
-
-/* ============ About-parity layer for the custom page ============
-   Same language as /about/: #f9f9f9 ground, 42/600 headings, red star
-   eyebrows, white hairline cards (16px radius, hover lift), steps ruled
-   by a hairline with the red number sitting on it. */
-.gh-p.custom-page{background:#f9f9f9}
-.gh-p.custom-page .band,
-.gh-p.custom-page .band--white{padding:88px 0;background:transparent}
-.gh-p.custom-page .band--tight{padding:0 0 88px}
-@media (max-width:760px){
-  .gh-p.custom-page .band,
-  .gh-p.custom-page .band--white{padding:56px 0}
-  .gh-p.custom-page .band--tight{padding:0 0 56px}
-}
-
-/* eyebrow */
-.cp-eyebrow{display:flex;align-items:center;gap:8px;margin:0 0 18px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#4b4b4b}
-.cp-eyebrow i{font-style:normal;color:#ef4444;font-size:15px;line-height:1;animation:cp-spin 9s linear infinite}
-@keyframes cp-spin{to{transform:rotate(360deg)}}
-@media (prefers-reduced-motion: reduce){ .cp-eyebrow i{animation:none} }
-
-/* headings + leads */
-.gh-p.custom-page .head{margin-bottom:44px}
-.gh-p.custom-page .head h2{font-size:clamp(30px,3.2vw,42px);font-weight:600;line-height:1.08;letter-spacing:-.02em;max-width:26ch;text-wrap:balance;margin:0 0 16px}
-.gh-p.custom-page .head h3{font-size:19px;font-weight:600;line-height:1.3;letter-spacing:-.01em;margin:0 0 8px}
-.gh-p.custom-page .head p{font-size:15.5px;line-height:1.62;color:#4b4b4b;max-width:66ch;margin:0}
-
-/* path cards: white, hairline, hover lift */
 .gh-p.custom-page .cats{gap:16px}
 .gh-p.custom-page .cat{
-  background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:20px;
-  grid-template-columns:180px minmax(0,1fr);gap:22px;align-items:start;
-  transition:transform .35s cubic-bezier(.16,1,.3,1),box-shadow .35s cubic-bezier(.16,1,.3,1),border-color .35s ease;
+  display:block;padding:0;overflow:hidden;
+  background:#fff;border:1px solid #e5e7eb;border-radius:16px;
 }
-.gh-p.custom-page .cat:hover{transform:translateY(-4px);box-shadow:0 20px 44px -26px rgba(23,23,23,.45);border-color:#fecaca}
-.gh-p.custom-page .cat__media{aspect-ratio:1/1;border-radius:12px}
-.gh-p.custom-page .cat__body h3{font-size:17px;font-weight:600;letter-spacing:-.01em;margin:0 0 8px}
-.gh-p.custom-page .cat__body p{font-size:14px;line-height:1.62;color:#4b4b4b;margin:0}
-.gh-p.custom-page .cat__link{font-size:14px;font-weight:600}
-.gh-p.custom-page .cat__link:hover{color:#dc2626}
+.gh-p.custom-page .cat__media{aspect-ratio:4/3;border-radius:0}
+.gh-p.custom-page .cat__media img{width:100%;height:100%;object-fit:cover;display:block}
+.gh-p.custom-page .cat__body{padding:18px 20px 20px}
+.gh-p.custom-page .cat__body h3{font-size:19px;font-weight:600;line-height:1.3;letter-spacing:-.01em;margin:0 0 7px}
+.gh-p.custom-page .cat__body p{font-size:14px;line-height:1.6;color:#4b4b4b;margin:0}
+@media (max-width:759px){
+  .gh-p.custom-page .cat__media{aspect-ratio:16/9}
+}
 
 /* feature tabs inside a white card, selected row tinted like About's icon tiles */
 .gh-p.custom-page .feat01__nav{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:12px;gap:2px}
