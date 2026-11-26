@@ -1066,8 +1066,8 @@ p.gh-file__hint{margin:10px 0 0}
 }
 
 /* red star eyebrow */
-.cp-eyebrow{display:flex;align-items:center;gap:8px;margin:0 0 18px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#4b4b4b}
-.cp-eyebrow i{font-style:normal;color:#ef4444;font-size:15px;line-height:1;animation:cp-spin 9s linear infinite}
+.cp-eyebrow{display:flex;align-items:center;gap:8px;margin:0 0 20px;font-size:14px;font-weight:500;letter-spacing:0;text-transform:uppercase;color:#4b4b4b}
+.cp-eyebrow i{font-style:normal;display:inline-block;color:#ef4444;font-size:18px;line-height:1;animation:cp-spin 8s linear infinite}
 @keyframes cp-spin{to{transform:rotate(360deg)}}
 @media (prefers-reduced-motion: reduce){ .cp-eyebrow i{animation:none} }
 
@@ -1075,4 +1075,4 @@ p.gh-file__hint{margin:10px 0 0}
 .gh-p.custom-page .head h2{font-size:clamp(30px,3.2vw,42px);font-weight:600;line-height:1.08;letter-spacing:-.02em;max-width:26ch;text-wrap:balance;margin:0 0 16px}
 .gh-p.custom-page .head h3{font-size:19px;font-weight:600;line-height:1.3;letter-spacing:-.01em;margin:0 0 8px}
 .gh-p.custom-page .head p{font-size:15.5px;line-height:1.62;color:#4b4b4b;max-width:66ch;margin:0}
-.gh-p.custom-page .head .cp-eyebrow{font-size:12px;line-height:1.2;color:#4b4b4b;max-width:none;margin:0 0 18px}
+.gh-p.custom-page .head .cp-eyebrow{font-size:14px;line-height:1.2;color:#4b4b4b;max-width:none;margin:0 0 20px}
