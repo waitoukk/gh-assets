@@ -1103,6 +1103,8 @@ p.gh-file__hint{margin:10px 0 0}
 
 /* ------------------------------------------------------------------
    Hero buttons.
+   Both buttons use the same resting and hover state — the labels carry the
+   difference, not the styling.
    From Uiverse.io by alexroumi - https://uiverse.io/alexroumi/shy-sloth-91
    MIT License, Copyright (c) alexroumi (Alexander Roumeliotis)
    Scoped under .chero2 so the generic "button" selectors cannot leak.
@@ -1128,13 +1130,6 @@ p.gh-file__hint{margin:10px 0 0}
 .chero2 .cpbtn svg{width:17px;height:17px;flex:0 0 auto}
 .chero2 .cpbtn:focus-visible{outline:2px solid #171717;outline-offset:3px}
 
-/* second button: same animation, quieter resting state so the pair still has a lead */
-.chero2 .cpbtn--ghost{
-  background:transparent;box-shadow:none;
-  border:1px solid rgba(23,23,23,.2);color:#171717;
-}
-.chero2 .cpbtn--ghost::before{background:#171717;box-shadow:none}
-.chero2 .cpbtn--ghost:hover{color:#fff}
 
 @media (max-width:520px){
   .chero2 .cpbtn{padding:13px 20px;font-size:15.5px;border-radius:13px}
